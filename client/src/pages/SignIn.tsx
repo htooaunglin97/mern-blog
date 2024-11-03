@@ -1,8 +1,10 @@
+import {Button} from "flowbite-react";
+
 const SignIn = () => {
     return (
-        <div>
+        <Button>
             SignIn
-        </div>
+        </Button>
     );
 };
 
