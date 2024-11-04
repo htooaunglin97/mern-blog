@@ -1,3 +1,4 @@
-export const test = (req, res) => {
-  res.json({ message: 'API works successfully' });
+export const test = async (req, res) => {
+  
+  res.json({ message: 'API is working successfully' });
 }

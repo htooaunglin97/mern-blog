@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import userRoutes from './routes/user.route.js';
+import authRoutes from './routes/auth.route.js';
 
 dotenv.config();
 
@@ -17,6 +18,8 @@ const connectDB = async () => {
 connectDB();
 
 const app = express();
+
+app.use(express.json());
 const port = 5000
 
 app.listen(5000, () => {
@@ -24,3 +27,4 @@ app.listen(5000, () => {
 })
 
 app.use('/api/users', userRoutes);
+app.use('/api/auth', authRoutes);
